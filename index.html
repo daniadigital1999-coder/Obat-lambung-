@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceklis 3 Bulan Pemulihan Tubuh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7e22ce',
+                        secondary: '#0891b2',
+                        turmeric: '#d97706',
+                        ginger: '#ea580c',
+                        guava: '#15803d',
+                        dark: '#020617',
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                        whatsapp: '#25d366',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .check-item:checked + label {
+                @apply line-through text-gray-400 opacity-75;
+            }
+            .recipe-card {
+                @apply glass-effect rounded-2xl p-6 mb-6 border-l-4;
+            }
+            .daily-item {
+                @apply flex items-start gap-4 p-4 rounded-xl bg-black/20 hover:bg-black/30 transition;
+            }
+            .history-item {
+                @apply glass-effect rounded-xl p-4 mb-3 border border-purple-700/30;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-dark via-slate-900 to-slate-800 min-h-screen text-white pb-32">
+
+    <!-- Header -->
+    <header class="text-center py-10 px-4">
+        <div class="inline-block glass-effect px-6 py-2 rounded-full mb-4">
+            <span class="text-primary font-semibold text-sm">🗓️ Program Pemulihan 3 Bulan</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+            CEKLIS HARIAN & RESEP LENGKAP
+        </h1>
+        <p class="text-gray-300 mt-2 max-w-xl mx-auto">Sembuhkan Lambung • Kuatkan Ginjal • Tenangkan Hati • Kurangi Rokok</p>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- BAGIAN 1: CEKLIS HARIAN -->
+    <!-- ============================================== -->
+    <section class="px-5 max-w-3xl mx-auto mb-16">
+        <div class="glass-effect rounded-3xl p-6 shadow-xl border-l-4 border-primary">
+            <h2 class="text-xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                <i class="fa fa-calendar-check-o text-primary"></i> CEKLIS HARIAN (Setiap Hari Selama 3 Bulan)
+            </h2>
+
+            <div class="space-y-5">
+                <!-- Pagi -->
+                <div class="daily-item">
+                    <input type="checkbox" id="cek1" class="check-item w-5 h-5 mt-1 rounded accent-turmeric cursor-pointer">
+                    <label for="cek1" class="flex-1">
+                        <span class="font-semibold text-turmeric">06.30 Pagi</span>
+                        <p class="text-gray-300 text-sm mt-1">Minum Air Kunyit Blender • Melapisi luka lambung, menenangkan hati, lindungi ginjal</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek2" class="check-item w-5 h-5 mt-1 rounded accent-slate-500 cursor-pointer">
+                    <label for="cek2" class="flex-1">
+                        <span class="font-semibold text-slate-300">07.00 Pagi</span>
+                        <p class="text-gray-300 text-sm mt-1">Sarapan: Bubur Nasi / Nasi Lembek + Sup Ayam / Tahu Rebus • Lembut & mudah dicerna</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek3" class="check-item w-5 h-5 mt-1 rounded accent-slate-500 cursor-pointer">
+                    <label for="cek3" class="flex-1">
+                        <span class="font-semibold text-slate-300">09.30 Pagi</span>
+                        <p class="text-gray-300 text-sm mt-1">Minum Air Putih Hangat / Makan Pisang Matang • Jaga perut jangan kosong</p>
+                    </label>
+                </div>
+
+                <!-- Siang -->
+                <div class="daily-item">
+                    <input type="checkbox" id="cek4" class="check-item w-5 h-5 mt-1 rounded accent-ginger cursor-pointer">
+                    <label for="cek4" class="flex-1">
+                        <span class="font-semibold text-ginger">12.00 Siang</span>
+                        <p class="text-gray-300 text-sm mt-1">Minum Air Jahe Muda Blender • Hilangkan kembung, tambah nafsu makan, lancarkan pencernaan</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek5" class="check-item w-5 h-5 mt-1 rounded accent-slate-500 cursor-pointer">
+                    <label for="cek5" class="flex-1">
+                        <span class="font-semibold text-slate-300">12.30 Siang</span>
+                        <p class="text-gray-300 text-sm mt-1">Makan Siang: Nasi + Sayur Rebus + Ikan/Ayam Kukus • Penuhi gizi agar badan perlahan berisi</p>
+                    </label>
+                </div>
+
+                <!-- Sore -->
+                <div class="daily-item">
+                    <input type="checkbox" id="cek6" class="check-item w-5 h-5 mt-1 rounded accent-guava cursor-pointer">
+                    <label for="cek6" class="flex-1">
+                        <span class="font-semibold text-guava">15.30 Sore</span>
+                        <p class="text-gray-300 text-sm mt-1">Minum Air Daun Jambu Kelutuk Blender • Cepat menutup luka lambung, kuatkan ginjal, kurangi keinginan merokok</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek7" class="check-item w-5 h-5 mt-1 rounded accent-red-500 cursor-pointer">
+                    <label for="cek7" class="flex-1">
+                        <span class="font-semibold text-red-400">16.00 Sore</span>
+                        <p class="text-gray-300 text-sm mt-1">Kurangi Jumlah Rokok Hari Ini • Perlahan kurangi sampai bisa berhenti total</p>
+                    </label>
+                </div>
+
+                <!-- Malam -->
+                <div class="daily-item">
+                    <input type="checkbox" id="cek8" class="check-item w-5 h-5 mt-1 rounded accent-turmeric cursor-pointer">
+                    <label for="cek8" class="flex-1">
+                        <span class="font-semibold text-turmeric">18.30 Malam</span>
+                        <p class="text-gray-300 text-sm mt-1">Minum Air Kunyit Blender Kedua • Tenangkan perut agar tidur nyenyak sepanjang malam</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek9" class="check-item w-5 h-5 mt-1 rounded accent-slate-500 cursor-pointer">
+                    <label for="cek9" class="flex-1">
+                        <span class="font-semibold text-slate-300">19.00 Malam</span>
+                        <p class="text-gray-300 text-sm mt-1">Makan Malam: Porsi Kecil, Makanan Ringan • Jangan sampai terlalu kenyang</p>
+                    </label>
+                </div>
+
+                <div class="daily-item">
+                    <input type="checkbox" id="cek10" class="check-item w-5 h-5 mt-1 rounded accent-blue-500 cursor-pointer">
+                    <label for="cek10" class="flex-1">
+                        <span class="font-semibold text-blue-400">Sebelum Tidur</span>
+                        <p class="text-gray-300 text-sm mt-1">Tarik Napas Dalam, Tenangkan Pikiran • Lepaskan beban hati agar tidur nyenyak</p>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Tombol Simpan & Bagikan -->
+            <div class="flex flex-wrap gap-4 justify-center mt-10">
+                <button onclick="simpanRiwayat()" class="bg-gradient-to-r from-primary to-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition flex items-center gap-2">
+                    <i class="fa fa-save"></i> Simpan Riwayat Hari Ini
+                </button>
+                <button onclick="bagikanKeWA()" class="bg-whatsapp text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition flex items-center gap-2">
+                    <i class="fa fa-whatsapp"></i> Bagikan ke WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- BAGIAN 2: RESEP LENGKAP -->
+    <!-- ============================================== -->
+    <section class="px-5 max-w-3xl mx-auto mb-16">
+        <h2 class="text-xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+            <i class="fa fa-cutlery text-secondary"></i> RESEP LENGKAP CARA MEMBUAT (PAKAI BLENDER)
+        </h2>
+
+        <!-- Resep Air Kunyit -->
+        <div class="recipe-card border-l-turmeric">
+            <h3 class="text-lg font-bold text-turmeric flex items-center gap-2 mb-4">
+                <i class="fa fa-circle"></i> Air Kunyit Blender
+                <span class="text-xs font-normal text-gray-400">(Minum Pagi & Malam • Setiap Hari)</span>
+            </h3>
+            <div class="space-y-3 text-gray-200 text-sm">
+                <p><strong>📝 Bahan:</strong></p>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li>1 ruas jari kunyit segar • Kupas bersih, cuci sampai tidak ada tanah</li>
+                    <li>1 gelas (200 ml) air matang hangat</li>
+                    <li><strong>Tanpa gula sama sekali!</strong></li>
+                </ul>
+                <p class="mt-4"><strong>👩‍🍳 Cara Membuat:</strong></p>
+                <ol class="list-decimal pl-6 space-y-1">
+                    <li>Potong kecil-kecil kunyit agar mudah hancur</li>
+                    <li>Masukkan ke dalam blender bersama air hangat</li>
+                    <li>Blender sampai benar-benar halus</li>
+                    <li><span class="text-red-400 font-semibold">WAJIB DISARING</span> pakai kain halus, buang ampasnya</li>
+                    <li>Minum selagi hangat, tawar saja</li>
+                </ol>
+                <p class="mt-3 text-xs italic text-turmeric-200">💡 Khasiat: Menutup luka lambung, menurunkan asam, menenangkan hati, melindungi ginjal, kurangi keinginan merokok</p>
+            </div>
+        </div>
+
+        <!-- Resep Air Jahe Muda -->
+        <div class="recipe-card border-l-ginger">
+            <h3 class="text-lg font-bold text-ginger flex items-center gap-2 mb-4">
+                <i class="fa fa-circle"></i> Air Jahe Muda Blender
+                <span class="text-xs font-normal text-gray-400">(Minum Siang Hari • Setiap Hari)</span>
+            </h3>
+            <div class="space-y-3 text-gray-200 text-sm">
+                <p><strong>📝 Bahan:</strong></p>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li>1 ruas jari jahe muda • Kupas bersih, cuci</li>
+                    <li>1 gelas (200 ml) air matang hangat</li>
+                    <li><strong>Tanpa gula</strong></li>
+                </ul>
+                <p class="mt-4"><strong>👩‍🍳 Cara Membuat:</strong></p>
+                <ol class="list-decimal pl-6 space-y-1">
+                    <li>Potong jahe menjadi bagian kecil</li>
+                    <li>Masukkan ke blender + air hangat</li>
+                    <li>Blender sampai halus merata</li>
+                    <li><span class="text-red-400 font-semibold">Saring sampai bersih</span> • Ambil airnya saja</li>
+                    <li>Minum hangat-hangat</li>
+                </ol>
+                <p class="mt-3 text-xs italic text-ginger-200">💡 Khasiat: Hilangkan rasa kembung, mual, tambah nafsu makan, lancarkan pencernaan</p>
+            </div>
+        </div>
+
+        <!-- Resep Air Daun Jambu Kelutuk -->
+        <div class="recipe-card border-l-guava">
+            <h3 class="text-lg font-bold text-guava flex items-center gap-2 mb-4">
+                <i class="fa fa-circle"></i> Air Daun Jambu Kelutuk Muda Blender
+                <span class="text-xs font-normal text-gray-400">(Minum Sore Hari • Setiap Hari)</span>
+            </h3>
+            <div class="space-y-3 text-gray-200 text-sm">
+                <p><strong>📝 Bahan:</strong></p>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li>Segenggam kecil daun muda jambu kelutuk • Pilih yang hijau muda, lunak, cuci bersih</li>
+                    <li>1 gelas (200 ml) air matang hangat</li>
+                    <li><strong>Tanpa gula</strong></li>
+                </ul>
+                <p class="mt-4"><strong>👩‍🍳 Cara Membuat:</strong></p>
+                <ol class="list-decimal pl-6 space-y-1">
+                    <li>Masukkan daun jambu + air hangat ke dalam blender</li>
+                    <li>Blender sampai daun benar-benar hancur halus</li>
+                    <li><span class="text-red-400 font-semibold">SANGAT WAJIB DISARING</span> sampai tidak ada serat tersisa</li>
+                    <li>Minum selagi hangat</li>
+                </ol>
+                <p class="mt-3 text-xs italic text-guava-200">💡 Khasiat: Paling cepat menutup luka lambung, menguatkan ginjal agar tidak bengkak, bikin mulut tidak suka rasa ro
